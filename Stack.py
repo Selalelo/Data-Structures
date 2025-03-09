@@ -16,6 +16,18 @@ class Stack:
             return self.stack[len(self.stack) - 1]
         else:
             return None
+    
+    def count(self):
+        if len(self.stack) > 0:
+            return len(self.stack)
+        else:
+            return None
+    
+    def clear(self):
+        if len(self.stack) > 0:
+            self.stack.clear()
+            return self.stack
+    
         
     def __str__(self):
         return str(self.stack)
@@ -25,6 +37,9 @@ myStack = Stack()
 myStack.push(1)
 print(myStack)
 myStack.push(2)
+print(myStack)
+print(myStack.count())
+print(myStack.clear())
 print(myStack)
 print(myStack.peek())
 myStack.pop()
