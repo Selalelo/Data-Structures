@@ -8,7 +8,7 @@ class Stack:
         else:
             return None
         
-    def insert(self, data):
+    def push(self, data):
         self.stack.append(data)
 
     def peek(self):
@@ -21,9 +21,9 @@ class Stack:
     
 
 myStack = Stack()
-myStack.insert(1)
+myStack.push(1)
 print(myStack)
-myStack.insert(2)
+myStack.push(2)
 print(myStack)
 print(myStack.peek())
 myStack.pop()
