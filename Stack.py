@@ -1,7 +1,7 @@
 class Stack:
     def __init__(self):
         self.stack = list()
-        
+
     def push(self, data):
         self.stack.append(data)
 
@@ -11,7 +11,6 @@ class Stack:
         else:
             return None
         
-   
     def peek(self):
         if len(self.stack) > 0:
             return self.stack[len(self.stack) - 1]
