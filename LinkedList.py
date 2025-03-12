@@ -48,12 +48,33 @@ class LinkedList:
             current_node = current_node.next
         print(llstring)
 
+    # Remove a node
+    def remove(self, data):
+         current_node =  self.head
+         prev_node = None
+         while current_node is not None:
+            if current_node.data == data:
+                if prev_node is None:
+                    # If the node to be deleted is the head, update head
+                    self.head = current_node.next
+                else:
+                    # If the node to be deleted is not the head, update the previous node's next pointer
+                    prev_node.next = current_node.next
+            # Move prev and temp pointers forward
+            prev_node = current_node
+            current_node = current_node.next
+
+        
+
+
 
 myLinkedList = LinkedList()
 myLinkedList.append(20)
 myLinkedList.append(30)
 myLinkedList.display()
 myLinkedList.insert(10,20)
+myLinkedList.display()
+myLinkedList.remove(20)
 myLinkedList.display()
 
 
